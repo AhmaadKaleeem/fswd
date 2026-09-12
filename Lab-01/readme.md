@@ -1,38 +1,19 @@
-# Full Stack Web Development
+# Lab 01: Web Foundations & Version Control
 
 **Student:** Ahmad Kaleem Bhatti
 **Registration No:** 242820
-**Instructor:** Mr. Abdullah
-**Program:** BS Computer Science
-**Semester:** 5th Semester
 **Course:** Full Stack Web Development (FSWD)
 
+## Overview
 
-## LAB-01 " Web Foundations & Version Control "
+This repository contains the deliverables for Lab 01, focusing on HTML5 semantics, CSS3 styling, and Bootstrap 5 components.
 
-### Files
+## Files
 
-* `index.html` Basic HTML webpage
-* `style.css` CSS styling for the webpage
-* `bootstrap-demo.html`  One-page portfolio demonstrating Bootstrap components and layout
+- `index.html`: Basic HTML webpage demonstrating semantic tags.
+- `style.css`: External stylesheet applied to `index.html`.
+- `bootstrap-demo.html`: A responsive page demonstrating Bootstrap 5 grid layout, navbar, and cards.
 
-### Bootstrap Portfolio
+## Usage
 
-The `bootstrap-demo.html` file contains a one-page portfolio with:
-
-* **Navbar**
-* **About Me** section using the Bootstrap grid system
-* **Skills** section using Bootstrap cards
-* **Contact** section with a button linking to email
-
-## How to Run
-
-Open either file directly in a web browser:
-
-```text
-LAB-01/index.html
-```
-
-
-
-No server or additional setup is required for this lab.
+No server is required. Open `index.html` or `bootstrap-demo.html` directly in any modern web browser to view the pages.
