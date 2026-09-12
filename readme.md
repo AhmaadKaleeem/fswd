@@ -1,47 +1,21 @@
-# Full Stack Web Development
+# Full Stack Web Development (FSWD)
 
 **Student:** Ahmad Kaleem Bhatti
 **Registration No:** 242820
 **Instructor:** Mr. Abdullah
-**Program:** BS Computer Science
-**Semester:** 5th Semester
-**Course:** Full Stack Web Development (FSWD)
+**Program:** BS Computer Science (5th Semester)
 
-## Repository Structure
+## Repository Overview
 
-```text
-fswd/
-└── LAB-01/
-    ├── index.html
-    ├── style.css
-    └── bootstrap-demo.html
-```
+This repository contains lab assignments for the Full Stack Web Development course.
 
-## LAB-01 " Web Foundations & Version Control "
+### Directory Structure
 
-### Files
+- Lab-01/ - Web Foundations & Version Control
+  - index.html: Basic HTML5 semantics.
+  - style.css: External CSS3 styling.
+  - ootstrap-demo.html: Bootstrap 5 grid, components, and responsiveness.
 
-* `index.html` Basic HTML webpage
-* `style.css` CSS styling for the webpage
-* `bootstrap-demo.html`  One-page portfolio demonstrating Bootstrap components and layout
+## Execution
 
-### Bootstrap Portfolio
-
-The `bootstrap-demo.html` file contains a one-page portfolio with:
-
-* **Navbar**
-* **About Me** section using the Bootstrap grid system
-* **Skills** section using Bootstrap cards
-* **Contact** section with a button linking to email
-
-## How to Run
-
-Open either file directly in a web browser:
-
-```text
-LAB-01/index.html
-```
-
-
-
-No server or additional setup is required for this lab.
+All HTML files can be opened directly in a modern web browser. No server is required.
