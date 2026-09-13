@@ -11,10 +11,10 @@ This repository contains lab assignments for the Full Stack Web Development cour
 
 ### Directory Structure
 
-- Lab-01/ - Web Foundations & Version Control
-  - index.html: Basic HTML5 semantics.
-  - style.css: External CSS3 styling.
-  - ootstrap-demo.html: Bootstrap 5 grid, components, and responsiveness.
+- **Lab-01/** - Web Foundations & Version Control
+  - `bootstrap-demo.html`: A highly-optimized, dark-themed AI Engineer portfolio leveraging custom CSS design tokens and staggered micro-animations.
+  - `style.css`: Contains the technical design system (`--void`, `--signal`), typography (Space Mono, Inter), and keyframe animations.
+  - `index.html`: Basic HTML5 semantics.
 
 ## Execution
 
