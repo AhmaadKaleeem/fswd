@@ -4,66 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Demo - Ahmad Kaleem Bhatti (242820)</title>
+    <!-- DEV: Load Bootstrap followed by custom style.css to ensure palette authenticity -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* DEV: Aesthetic enhancements to complement the authentic style.css palette */
+        .btn-theme { 
+            background-color: orange; 
+            color: white; 
+            border: 2px solid orange; 
+            transition: all 0.3s ease;
+        }
+        .btn-theme:hover { 
+            background-color: green; 
+            border-color: green;
+            color: white; 
+        }
+        .custom-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-color: orange;
+        }
+        /* DEV: Ensure navbar links look good inside the bootstrap collapse */
+        nav ul { padding-left: 0; }
+        @media (max-width: 991px) {
+            nav ul { flex-direction: column; padding: 10px 0; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- DEV: Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">AU FullStack Lab</a>
+            <a class="navbar-brand fs-3 fw-bold" style="color: orange;" href="#">Ahmad's Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <ul class="ms-auto mb-0 align-items-center">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h2>Bootstrap Demo by Ahmad Kaleem Bhatti</h2>
-        <p>Registration Number: 242820</p>
-        <hr>
+    <!-- DEV: Profile Header -->
+    <header class="shadow-sm">
+        <h1 class="display-4 fw-bold">Ahmad Kaleem Bhatti</h1>
+        <p class="fs-4 mb-2">Registration Number: 242820</p>
+        <p class="mb-0">
+            <a href="https://ahmadkaleem.tech" target="_blank" style="color: white; text-decoration: underline;">
+                ahmadkaleem.tech
+            </a>
+        </p>
+    </header>
 
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body">
-                        <h5 class="card-title">Full Stack Web Development</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">BS Computer Science Course</h6>
-                        <p class="card-text">Learn front-end and back-end technologies, including HTML5, CSS3, Bootstrap, and modern frameworks.</p>
-                        <a href="#" class="btn btn-primary">Enroll Now</a>
+    <div class="container">
+        
+        <!-- DEV: About Segment -->
+        <section id="about" class="bg-white shadow-sm">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <img src="https://ui-avatars.com/api/?name=Ahmad+Kaleem&background=orange&color=fff&size=200&bold=true" class="img-fluid rounded-circle shadow" alt="Profile Avatar">
+                </div>
+                <div class="col-md-7">
+                    <h3 style="color: black;">Who am I?</h3>
+                    <p style="color: black; line-height: 1.6;">I am a computer science student at Air University Islamabad, currently taking the Full Stack Web Development lab course.</p>
+                    <p style="color: black; line-height: 1.6;">You can view my actual portfolio and past projects at <a href="https://ahmadkaleem.tech" target="_blank">ahmadkaleem.tech</a>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DEV: Skills Segment -->
+        <section id="skills" class="bg-white shadow-sm">
+            <h2 class="text-center mb-4">My Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" style="color: orange;">Front-End</h5>
+                            <h6 class="card-subtitle mb-2" style="color: green;">HTML5, CSS3, JS</h6>
+                            <p class="card-text small text-muted">Building responsive, accessible, and interactive user interfaces using modern web standards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" style="color: orange;">Back-End</h5>
+                            <h6 class="card-subtitle mb-2" style="color: green;">Node & DBs</h6>
+                            <p class="card-text small text-muted">Developing robust server-side logic, creating APIs, and managing database structures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" style="color: orange;">Security</h5>
+                            <h6 class="card-subtitle mb-2" style="color: green;">AUCSS Member</h6>
+                            <p class="card-text small text-muted">Exploring ethical hacking, network security, and participating in CTF events.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="col-md-4 mb-3">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body">
-                        <h5 class="card-title">AUCIS</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Air University Computing and Innovation Society</h6>
-                        <p class="card-text">Participate in hackathons, enhance your programming skills, and collaborate on innovative tech projects.</p>
-                        <a href="#" class="btn btn-outline-success">Learn More</a>
-                    </div>
-                </div>
-            </div>
+        <!-- DEV: Contact Segment -->
+        <section id="contact" class="text-center bg-white shadow-sm">
+            <h2 class="mb-4">Contact Me</h2>
+            <p class="lead" style="color: black;">Have a project in mind, a question, or just want to say hi?</p>
+            <a href="mailto:ahmadkaleeem1@gmail.com" class="btn btn-theme btn-lg mt-3 shadow-sm px-5 py-2 rounded-pill fw-bold text-decoration-none">
+                Email Me
+            </a>
+        </section>
 
-            <div class="col-md-4 mb-3">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body">
-                        <h5 class="card-title">AUCSS</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Air University Cyber Security Society</h6>
-                        <p class="card-text">Explore ethical hacking, network security, and cryptography. Join our weekly Capture The Flag (CTF) events.</p>
-                        <button type="button" class="btn btn-primary">Join Society</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+    <!-- DEV: Page Footer -->
+    <footer>
+        <p class="mb-0 fw-bold">&copy; 2026 AIR University Islamabad - Ahmad Kaleem Bhatti</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
