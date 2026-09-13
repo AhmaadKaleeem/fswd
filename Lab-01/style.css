@@ -1,69 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root {
+  --void: #000000;
+  --signal: #FFFFFF;
+  --allow: #059D00;
+  --escalate: #DF6513;
+  --surface: #0a0a0a;
+  --border: #222222;
+  --font-display: "Courier Prime", monospace;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+/* Base Theme */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: white;
-    color: black;
+    background-color: var(--void) !important;
+    color: var(--signal) !important;
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
-header {
-    background-color: orange;
-    color: white;
-    padding: 20px;
-    text-align: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-body);
+    letter-spacing: -0.02em;
 }
 
-nav {
-    background-color: black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.font-mono {
+    font-family: var(--font-mono);
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    margin: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-nav ul li a:hover {
-    color: green;
-}
-
+/* Layout & Overrides */
 section {
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    border: 2px solid orange;
-    border-radius: 8px;
+    border: none !important;
+    background-color: transparent !important;
 }
 
-section h1, section h2 {
-    color: orange;
-}
-
-section a {
-    color: green;
+/* Navigation Links */
+.nav-link-custom {
+    color: #e0e0e0 !important;
+    position: relative;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.nav-link-custom:hover {
+    color: var(--escalate) !important;
+}
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--escalate);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+.nav-link-custom:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-section a:hover {
-    color: black;
+/* Button Components */
+.btn-tech { 
+    background-color: transparent; 
+    color: var(--escalate); 
+    border: 1px solid var(--escalate); 
+    transition: all 0.3s ease;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    border-radius: 2px !important;
+}
+.btn-tech:hover { 
+    background-color: var(--escalate); 
+    color: var(--void); 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(223, 101, 19, 0.4);
 }
 
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+/* Card Components */
+.tech-card {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--escalate) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+.avatar-float {
+    animation: float 4s ease-in-out infinite;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s;
+    border-radius: 4px !important; /* Sharp corners instead of rounded for less fluff */
+    object-fit: cover;
+}
+.avatar-float:hover {
+    border-color: var(--allow);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
 }
