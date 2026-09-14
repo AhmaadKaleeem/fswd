@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#dbGrad)"/>
+  <rect x="20" y="20" width="560" height="320" rx="8" fill="#0d0d0d" stroke="#262626" stroke-width="1.5"/>
+
+  <!-- Database Cylinders -->
+  <!-- Cylinder 1 -->
+  <g transform="translate(100, 70)">
+    <ellipse cx="60" cy="30" rx="55" ry="18" fill="#1f1f1f" stroke="#df6513" stroke-width="2"/>
+    <path d="M 5,30 v 50 c 0,10 25,18 55,18 s 55,-8 55,-18 v -50" fill="#141414" stroke="#df6513" stroke-width="2"/>
+    <path d="M 5,80 v 50 c 0,10 25,18 55,18 s 55,-8 55,-18 v -50" fill="#141414" stroke="#df6513" stroke-width="2"/>
+    <path d="M 5,130 v 50 c 0,10 25,18 55,18 s 55,-8 55,-18 v -50" fill="#141414" stroke="#df6513" stroke-width="2"/>
+    <ellipse cx="60" cy="80" rx="55" ry="18" fill="none" stroke="#444" stroke-width="1.5"/>
+    <ellipse cx="60" cy="130" rx="55" ry="18" fill="none" stroke="#444" stroke-width="1.5"/>
+    <ellipse cx="60" cy="180" rx="55" ry="18" fill="none" stroke="#444" stroke-width="1.5"/>
+    <text x="60" y="34" fill="#df6513" font-family="'Space Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle">PRIMARY</text>
+  </g>
+
+  <!-- Query / Shard Pipes & Nodes -->
+  <path d="M 230, 160 H 340" stroke="#059d00" stroke-width="3" stroke-dasharray="6,4"/>
+  <polygon points="340,155 352,160 340,165" fill="#059d00"/>
+  
+  <!-- Replica 1 -->
+  <g transform="translate(370, 50)">
+    <ellipse cx="45" cy="20" rx="40" ry="12" fill="#1a1a1a" stroke="#059d00" stroke-width="1.5"/>
+    <path d="M 5,20 v 35 c 0,7 18,12 40,12 s 40,-5 40,-12 v -35" fill="#111" stroke="#059d00" stroke-width="1.5"/>
+    <path d="M 5,55 v 35 c 0,7 18,12 40,12 s 40,-5 40,-12 v -35" fill="#111" stroke="#059d00" stroke-width="1.5"/>
+    <text x="45" y="24" fill="#059d00" font-family="'Space Mono', monospace" font-size="9" text-anchor="middle">REPLICA-01</text>
+  </g>
+
+  <!-- Replica 2 -->
+  <g transform="translate(370, 170)">
+    <ellipse cx="45" cy="20" rx="40" ry="12" fill="#1a1a1a" stroke="#059d00" stroke-width="1.5"/>
+    <path d="M 5,20 v 35 c 0,7 18,12 40,12 s 40,-5 40,-12 v -35" fill="#111" stroke="#059d00" stroke-width="1.5"/>
+    <path d="M 5,55 v 35 c 0,7 18,12 40,12 s 40,-5 40,-12 v -35" fill="#111" stroke="#059d00" stroke-width="1.5"/>
+    <text x="45" y="24" fill="#059d00" font-family="'Space Mono', monospace" font-size="9" text-anchor="middle">REPLICA-02</text>
+  </g>
+
+  <!-- Console Log Box -->
+  <rect x="50" y="285" width="500" height="40" rx="4" fill="#050505" stroke="#333"/>
+  <text x="65" y="310" fill="#059d00" font-family="'Space Mono', monospace" font-size="11">$ pg_dump --cluster=prod-alpha | 100% synchronized in 1.4s [OK]</text>
+</svg>
