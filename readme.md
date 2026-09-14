@@ -1,21 +1,32 @@
 # Full Stack Web Development (FSWD)
 
-**Student:** Ahmad Kaleem Bhatti
-**Registration No:** 242820
-**Instructor:** Mr. Abdullah
-**Program:** BS Computer Science (5th Semester)
+**Student:** Ahmad Kaleem Bhatti  
+**Registration No:** 242820  
+**Instructor:** Mr. Abdullah  
+**Program:** BS Computer Science (5th Semester)  
 
-## Repository Overview
+---
 
-This repository contains lab assignments for the Full Stack Web Development course.
+## Course Overview
 
-### Directory Structure
+This repository contains lab tasks, assignments, and coursework for the Full Stack Web Development (FSWD) course at Air University Islamabad.
 
-- **Lab-01/** - Web Foundations & Version Control
-  - `bootstrap-demo.html`: A highly-optimized, dark-themed AI Engineer portfolio leveraging custom CSS design tokens and staggered micro-animations.
-  - `style.css`: Contains the technical design system (`--void`, `--signal`), typography (Space Mono, Inter), and keyframe animations.
-  - `index.html`: Basic HTML5 semantics.
+---
 
-## Execution
+## Lab Directory
 
-All HTML files can be opened directly in a modern web browser. No server is required.
+### [Lab 01: Web Foundations & Bootstrap](file:///d:/Ahmad/FSWD/Lab-01)
+Covers basic HTML5 semantics, custom CSS styling, and responsive UI design using Bootstrap 5.
+- `bootstrap-demo.html` — Responsive developer portfolio built with Bootstrap 5 components, grid system, and custom styling.
+- `style.css` — Custom dark-theme styles, typography, and hover animations.
+- `index.html` — Introductory webpage demonstrating semantic HTML tags.
+- `assets/` — Media assets used across the lab pages.
+
+### [Lab 02](file:///d:/Ahmad/FSWD/Lab-02)
+- *Upcoming lab coursework*
+
+---
+
+## How to View
+
+All HTML files can be opened directly in any modern web browser. No local development server or build process is required.
