@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Space+Mono:wght@400;700&display=swap');
+
+/* ==========================================================================
+   Design Tokens & Variables (Terminal Curator Theme)
+   ========================================================================== */
+:root {
+    --void: #000000;
+    --surface-card: #0a0a0a;
+    --surface-hover: #141414;
+    
+    --text-primary: #e5e5e5;
+    --text-secondary: #a3a3a3;
+    --text-dim: #525252;
+    
+    --border-light: #262626;
+    --border-focus: #404040;
+    
+    --signal: #ffffff; /* pure white for strong emphasis */
+    --allow: #22c55e; /* terminal green */
+    --escalate: #f97316; /* terminal orange */
+    
+    --font-mono: 'Space Mono', monospace;
+    --font-body: 'Courier Prime', monospace;
+    
+    --container-max-width: 1000px;
+    --radius: 0px; /* Sharp corners for terminal feel */
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--void);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-mono);
+    color: var(--signal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--signal);
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar-custom {
+    border-bottom: 1px solid var(--border-light);
+    padding: 1rem 0;
+    background-color: var(--void);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Cards & Surfaces
+   ========================================================================== */
+.app-card {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-light);
+    padding: 2rem;
+    height: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.app-card:hover {
+    border-color: var(--border-focus);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Forms & Inputs
+   ========================================================================== */
+.form-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-control, .form-select {
+    background-color: var(--void) !important;
+    border: 1px solid var(--border-light) !important;
+    color: var(--text-primary) !important;
+    border-radius: var(--radius) !important;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--signal) !important;
+    box-shadow: none !important;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-primary-custom {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--signal);
+    border: 1px solid var(--signal);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--signal);
+    color: var(--void);
+}
+
+/* ==========================================================================
+   Output Box
+   ========================================================================== */
+.output-box {
+    background-color: var(--void);
+    border: 1px solid var(--border-light);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.status-result {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Status Colors */
+.status-success { color: var(--allow); }
+.status-error { color: var(--escalate); }
+.status-neutral { color: var(--signal); }
+
+.bg-success-soft { border-left: 4px solid var(--allow); background-color: var(--surface-card); }
+.bg-error-soft { border-left: 4px solid var(--escalate); background-color: var(--surface-card); }
+.bg-neutral-soft { border-left: 4px solid var(--signal); background-color: var(--surface-card); }
+
+/* Tables */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table-custom td {
+    padding: 0.75rem 0;
+    border-bottom: 1px dotted var(--border-light);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.table-custom tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge-custom {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-light);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Helpers */
+.text-signal { color: var(--signal) !important; }
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-dim { color: var(--text-dim) !important; }
+.font-mono { font-family: var(--font-mono) !important; }
+
+/* Hide Number Spinners for Terminal Aesthetic */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
