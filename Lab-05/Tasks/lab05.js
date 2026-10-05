@@ -133,9 +133,11 @@ function runWorkflow(roll, outputId) {
 
     verifyStudent(roll, (error, data1) => {
         if (error) {
+            outputElem.style.color = "var(--danger-color)";
             outputElem.textContent += `Error: ${error}\n`;
             return;
         }
+        outputElem.style.color = "#4ade80"; // reset to green
         log(`Step 1: ${data1}`);
         loadExamPaper((error, data2) => {
             if (error) return;
@@ -153,8 +155,10 @@ function runWorkflow(roll, outputId) {
     });
 }
 
-runWorkflow("BSCS-001", "task3AOutput");
-runWorkflow("", "task3BOutput");
+document.getElementById('task3RunBtn').addEventListener('click', () => {
+    const roll = document.getElementById('task3RollNumber').value.trim();
+    runWorkflow(roll, "task3Output");
+});
 
 
 // ==========================================================
